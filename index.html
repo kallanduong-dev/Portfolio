@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0"> 
+    <title>Kallan Duong Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <h1>Kallan Duong's Coding Corner</h1>
+        </div>
+    </div>
+</div>
+
+<!-------about------>
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/profile.jpg" id="profile">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1>
+                <p>My name is Kallan and I have a passion for software and technology. I love understanding the intracacies of how things work and building tangible solutions. I am particularly passionate about machine learning and software development.</p>
+                
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Object-oriented programming</span><br>Designing and developing projects using OOP fundamentals.</li>
+                        <li><span>Web development</span><br>Web development using HTML, CSS and Javascript.</li>
+                        <li><span>Artificial intelligence</span><br>Understanding and implementing machine learning algorithms (SVM, PCA, K means, Neural Networks, etc).</li>
+                        <li><span>Algorithms and data strcutures</span><br>Understanding and implementing various algorithms (eg PSO), as well as analysing performance.</li>
+                        <li><span>Software engineering processes</span><br>Understanding how the software development process works and using that to collaborate as a team.</li>
+                        <li><span>Requirements Gathering</span><br>Gathering and understanding client requirements. Verifying whether requirements are possible and building a solution based on client needs.</li>
+                        <li><span>Presentation Skills</span><br>Presenting solutions in an clear and easy-to-understand way.</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Deloitte Australia</span><br>Currently working at Deloitte Adelaide as a graduate consultant. I am currently a part of the SAP SuccessFactors Team working as a technical consultant. My job involves integrating SAP SuccessFactors with external systems that a client may need. I additionally work on developing new extensions for the SuccessFactors system. My time at Deloitte has greatly improved my understanding of how a project functions and how to collaborate with various members of the team to produce an outstanding result. Through this, I have developed communication, team collaboration and presentation skills. </li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>The University of Adelaide (2021-2023)</span><br>I completed a Bachelor of Computer Science (Advanced) with a major in artificial intelligence at the University of Adelaide. This degree has developed my understanding of the software engineering process, as well as technical skills in web development, analysis and implementation of algorithms and artificial intelligence.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-------Portfolio------>
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="subtitle">Projects</h1>
+        <div class="project-list">
+            <div> 
+                <h2>AI Colorectal Polyp Detection</h2>
+                <p>Trained colorectal polyp detecting AI. The yolov3 object detection model was trained on a set of colonoscopy images. The difficulty that the model had with different types of polyps was then analysed in a report format. The image below is an analysis of which areas are the most important for the object detector when making its prediction.</p>
+                <br>
+                <img src="images/polyp_detection.png" class="project-media" width="300" height="200">
+                <a href="https://github.com/kallanduong-dev/Polyp-Detection_AI">Github Link</a>
+            </div>
+            <div> 
+                <h2>Pygame Fishing Game</h2>
+                <p>Created a visual fish collecting game, which included developing minigames to dodge seaweed and time reeling in. Players are able to navigate the map and fish in different ponds with different fish of various rarities. Players can then catch the encountered fish by beating the two minigames.</p>
+                <br>
+                <video controls loop autoplay muted width="400" height = "200"> 
+                    <source src="images/fishing_game.mp4" type="video/mp4" >
+                </video>
+                <a href="https://github.com/kallanduong-dev/fishing_game">Github Link</a>
+            </div>
+            <div> 
+                <h2>Quiz Website</h2>
+                <p>Created a website where users can post and answer quizzes. The website was hosted using an express server and data was stored in a mysql database.</p>
+                <br><br><br>
+                <video controls loop autoplay muted width="400" height = "200"> 
+                    <source src="images/quiz_website.mp4" type="video/mp4" >
+                </video>
+                <a href="https://github.com/kallanduong-dev/Quiz_website">Github Link</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--contact-->
+<div id="contact">
+    <div class="container">
+        <div id="row">
+            <div class="contact-left"></div>
+            <h1 class="subtitle" id="contact-subtitle">Contact Me</h1>
+            <div class="contact-item">
+                <img src="images/email-icon.png" alt="Email" class="contact-icon">
+                <p>kallan.duong@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <img src="images/linkedin-icon.png" alt="Email" class="contact-icon">
+                <a href="linkedin.com/in/kallan-duong">linkedin.com/in/kallan-duong</a>
+            </div>
+            <div class="contact-item">
+                <img src="images/github-icon.png" alt="Email" class="contact-icon">
+                <a href="github.com/kallanduong-dev">github.com/kallanduong-dev</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script> 
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+</body>
+
+
+</html>
